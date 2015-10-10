@@ -1,4 +1,5 @@
 # Django settings for addressbook project.
+import os.path
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

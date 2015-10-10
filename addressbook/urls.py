@@ -9,6 +9,9 @@ urlpatterns = patterns('',
         name='contacts-list',),
     url(r'^new$', contacts.views.CreateContactView.as_view(),
         name='contacts-new',),
+    url(r'^edit/(?P<pk>\d+)/$', contacts.views.UpdateContactView.as_view(),
+	name='contacts-edit',),
 )
 
 urlpatterns += staticfiles_urlpatterns()
+
