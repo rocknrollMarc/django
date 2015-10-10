@@ -1,10 +1,7 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-# Uncomment the next two lines to enable the admin:
 import contacts.views
-
-from django.contrib import admin
-admin.autodiscover()
 
 
 urlpatterns = patterns('',
@@ -13,3 +10,5 @@ urlpatterns = patterns('',
     url(r'^new$', contacts.views.CreateContactView.as_view(),
         name='contacts-new',),
 )
+
+urlpatterns += staticfiles_urlpatterns()
